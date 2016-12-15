@@ -39,9 +39,30 @@ class pr54
 				}
 			Collections.sort(ann);
 			}
+		System.out.println("ANN");
+		for(String hi : ann)
+			{
+			System.out.println("   " + hi);
+			}
+		System.out.println("BOB");
 		for(String hi : bob)
 			{
-			System.out.println(hi);
+			System.out.println("   " + hi);
+			}
+		System.out.println("JOE");
+		for(String hi : joe)
+			{
+			System.out.println("   " + hi);
+			}
+		System.out.println("MARY");
+		for(String hi : mary)
+			{
+			System.out.println("   " + hi);
+			}
+		System.out.println("TOM");
+		for(String hi : tom)
+			{
+			System.out.println("   " + hi);
 			}
 		}
 	}
