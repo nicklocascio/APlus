@@ -17,13 +17,51 @@ class pr20
     file.nextLine();
     for(int i = 0; i < times; i++)
       {
+      ArrayList <Integer> one = new ArrayList <Integer>();
+      ArrayList <Integer> two = new ArrayList <Integer>();
+      ArrayList <Integer> three = new ArrayList <Integer>();
       String line = file.nextLine();
+      System.out.println(line);
       String [] position = line.split(" ");
       int row = Integer.parseInt(position[0]);
       int col = Integer.parseInt(position[1]);
-      for(int r = row-1; r < row; r++)
+//      System.out.println(row);
+//      System.out.println(col);
+      if(((row-1) >= 0) && ((row+1) <= 4) && ((col-1) >=0) && ((col+1 <= 4)))
     	  {
-    	  for(int c =)
+	      for(int r = (row-1); r < (row+2); r++)
+	    	  {
+	    	  for(int c = (col-1); c < col; c++)
+	    		  {
+	    		  one.add(array[r][c]);
+	    		  }
+	    	  }
+	      for(int r = (row-1); r < (row+2); r++)
+	    	  {
+	    	  for(int c = col; c < col+1; c++)
+	    		  {
+	    		  two.add(array[r][c]);
+	    		  }
+	    	  }
+	      for(int r = (row-1); r < (row+2); r++)
+	    	  {
+	    	  for(int c = col+1; c < col+2; c++)
+	    		  {
+	    		  three.add(array[r][c]);
+	    		  }
+	    	  }
+    	  }
+      for(Integer hi : one)
+    	  {
+    	  System.out.println(hi);
+    	  }
+      for(Integer hi : two)
+    	  {
+    	  System.out.println(hi);
+    	  }   
+      for(Integer hi : three)
+    	  {
+    	  System.out.println(hi);
     	  }
       }
     }
