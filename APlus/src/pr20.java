@@ -5,6 +5,7 @@ class pr20
   {
   public static void main(String[] args) throws IOException
     {
+    	hi();
     int [][] array = new int [][]{
     {1, 2, 3, 4, 5},
     {15, 7, 8, 9, 71},
@@ -17,87 +18,37 @@ class pr20
     file.nextLine();
     for(int i = 0; i < times; i++)
       {
-      ArrayList <Integer> one = new ArrayList <Integer>();
       String line = file.nextLine();
       String [] position = line.split(" ");
       int row = Integer.parseInt(position[0]);
       int col = Integer.parseInt(position[1]);
-      if(((row-1) >= 0) && ((row+1) <= 4) && ((col-1) >=0) && ((col+1 <= 4)))
-    	  {
-	      for(int r = (row-1); r < (row+2); r++)
-	    	  {
-	    	  for(int c = (col-1); c < col+2; c++)
-	    		  {
-	    		  one.add(array[r][c]);
-	    		  }
-	    	  }	      
-    	  }
-      else if(row == 0)
-	      {
-    	  if(col > 0)
-	    	  {
-	    	  for(int r = row; r < (row+2); r++)
-		    	  {
-		    	  for(int c = (col-1); c < col+2; c++)
-		    		  {
-		    		  one.add(array[r][c]);
-		    		  }
-		    	  }	
-	    	  }
-    	  else
-	    	  {
-    		  for(int r = row; r < (row+2); r++)
-		    	  {
-		    	  for(int c = col; c < col+2; c++)
-		    		  {
-		    		  one.add(array[r][c]);
-		    		  }
-		    	  }	  
-	    	  }
-	      }
-      else if(row == 4)
-	      {
-	      if(col == 4)
-	      	  {
-	    	  for(int r = (row-1); r < row+1; r++)
-		    	  {
-		    	  for(int c = (col-1); c < col+1; c++)
-		    		  {
-		    		  one.add(array[r][c]);
-		    		  }
-		    	  }	
-	      	  }
-	      else
-		      {
-	    	  for(int r = (row-1); r < row+1; r++)
-		    	  {
-		    	  for(int c = (col-1); c < col+2; c++)
-		    		  {
-		    		  one.add(array[r][c]);
-		    		  }
-		    	  }	  
-		      }
-	      }
-      else if(col == 4 && row != 4)
-      	  {
-    	  for(int r = (row-1); r < row+2; r++)
-	    	  {
-	    	  for(int c = (col-1); c < col+1; c++)
-	    		  {
-	    		  one.add(array[r][c]);
-	    		  }
-	    	  }	  
-      	  } 
       int sum = 0;
-      double average = 0;
-      for(int p = 0; p < one.size(); p++)
-	      {
-    	  sum += one.get(p); 
-	      }
-      average = sum/one.size();
-      System.out.printf("%.2f", average);
-      System.out.println();
+	  for(int r = 0; r < array.length; r++)
+    	  {
+    	  for(int c = 0; c < array[0].length; c++)
+    		  {
+    		  if((r == (row-1) || r == row || r == (row+1)) && (c == (col-1) || c == col || c == (col+1)))
+    			  {
+    			  sum += array[r][c];
+    			  }
+    		  }
+    	  }	       
+      System.out.println(sum);
+//      average = sum/one.size();
+//      System.out.printf("%.2f", average);
+//      System.out.println();
       }
     }
+  public static void hi()
+	  {
+	  String one = "hi";
+	  String two = "three";
+	  String three = "Yo";
+	  System.out.println(one.compareTo(two));
+	  System.out.println(one.compareTo(three));
+	  System.out.println(three.compareTo(one));
+	  System.out.println(two.compareTo(one));
+	  System.out.println(one.substring(0));
+	  }
   }
   
