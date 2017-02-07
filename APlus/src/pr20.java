@@ -5,8 +5,8 @@ class pr20
   {
   public static void main(String[] args) throws IOException
     {
-	  hi();
-//	  int [][] array = new int [][]{
+	hi();
+//    int [][] array = new int [][]{
 //    {1, 2, 3, 4, 5},
 //    {15, 7, 8, 9, 71},
 //    {6, 7, 11, 2, 5},
@@ -34,13 +34,14 @@ class pr20
 //    		  }
 //    	  }	       
 //      System.out.println(sum);
-////      average = sum/one.size();
-////      System.out.printf("%.2f", average);
-////      System.out.println();
-      }
-//    }
+//      double average = sum/one.size();
+//      System.out.printf("%.2f", average);
+//      System.out.println();
+//      }
+    }
+
   public static void hi()
-  {
+  	{
 	int[] x = new int[5];
 	for(int i : x)
 	{
@@ -50,8 +51,6 @@ class pr20
 	  
 	for(int hi : x)
 		System.out.println(hi);
-  }
-  
-	 
+  	}
   }
   
