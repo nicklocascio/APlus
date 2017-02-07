@@ -15,7 +15,8 @@ public class pr22part2
 			double num = Integer.parseInt(hello[0]);
 			double denom = Integer.parseInt(hello[1]);
 			double fraction = num/denom;
-			System.out.println(fraction);
+			System.out.printf("%.3f", fraction);
+			System.out.println();
 			}
 		}
 	}
