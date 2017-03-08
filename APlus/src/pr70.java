@@ -5,9 +5,14 @@ public class pr70
 		{
 		String word = "PALINDROME";
 		String newWord = "";
-		for()
+		String [] letters = new String [word.length()];
+		for(int i = 0; i < word.length(); i++)
 			{
-			newWord += word.substring(i, i-1);
+			letters[i] = word.substring(i, i+1);
+			}
+		for(int i = letters.length-1; i >= 0; i--)
+			{
+			newWord += letters[i];
 			}
 		System.out.println(newWord);
 		}
