@@ -40,12 +40,14 @@ public class pr74
 				    	{
 				    	word += letters[p];
 				    	}
+				    words[j] = word;
 					}
 				}
 			for(String hi : words)
 				{
-				System.out.println(hi);
+				System.out.print(hi + " ");
 				}
+			System.out.println();
 			}
 		}
 	}
