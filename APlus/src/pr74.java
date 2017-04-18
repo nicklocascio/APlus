@@ -23,6 +23,10 @@ public class pr74
 						}
 					words[j] = word;
 					}
+				else if(words[j].length() < j)
+	                {
+	                words[j] = words[j];
+	                }
 				else
 					{
 					String [] letters = words[j].split("");
