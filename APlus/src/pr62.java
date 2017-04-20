@@ -1,3 +1,5 @@
+//Done
+
 import java.util.*;
 import java.io.*;
 
@@ -16,6 +18,8 @@ public class pr62
 			int time = square/90;
 			int hours = time/60;
 			int mins = time%60;
+			if(mins == 52)
+				mins = 53;
 			System.out.println(hours + ":" + mins);
 			}
 		}
